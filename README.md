@@ -49,9 +49,9 @@
 
     划分为五个模块
     为index,about,details,book,user
-###添加路由
-新建router文件
-   1.在该目录下建立index.js 
+### 添加路由
+  1.新建router文件
+   在该目录下建立index.js 
    
    导入 
    
@@ -83,4 +83,34 @@
        );  
    ```
    
+### 编写页面的头部和底部
+    一：头部
+    1.使用antd的Layout布局
+    2.遇到了样式无法加载问题
+        使用：
+   ```
+        import 'antd/dist/antd.css
+        import <Layout> from 'antd'
+   ```
+    有时候仅仅导入antd是没有效果的
+    3.使用Row Col 
+    利用md和xs设计响应布局
+   ```
+   <Col md={8} xs={24}>     </Col>
+   <Col md={16} xs={0}>     </Col>
+   ```
+    4.使用Divider分割线
+   ``` 
+   <Divider type="vertical"/>
+   ``` 
+   
+    5.使用Menu,制作菜单
+    6.使用Icon,图标相关方面
+   ```
+   <Icon type="home"/>
+   ```
+   7.制作小屏幕下拉菜单
+   ```Dropdown```　
+   
+   8.封装导航部分，放在组件里，传递参数，控制导航的方向问题
    
