@@ -44,4 +44,43 @@
 
 ```npm i babel-plugin-import -D```
 
+### 视图划分
+新建view文件
+
+    划分为五个模块
+    为index,about,details,book,user
+###添加路由
+新建router文件
+   1.在该目录下建立index.js 
+   
+   导入 
+   
+   import {Switch,Route,Redirect} from "react-router-dom";
+   ```
+   <Switch>
+            <Route path="/" exact render={()=>(
+                          <Redirect to="/index/all" />
+                      )} />
+                      <Route path="/index" component = {Index}/>
+                     
+                  </Switch>
+   ```
+   2.在src文件使用HashRouter或者BrowserRouter
+   ```
+    <BrowserRouter>
+           <App />
+       </BrowserRouter>
+   ``` 
+   3.在App.js中使用RouteIndex
+  
+   ```
+   import RouterIndex from "./router";
+    return (
+         <div>
+             <RouterIndex/>
+   
+         </div>
+       );  
+   ```
+   
    

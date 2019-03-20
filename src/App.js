@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
-
+import RouterIndex from "./router";
 
 class App extends Component {
   render() {
+
     return (
-      <div className="App">
+      <div>
+          <RouterIndex/>
+
       </div>
     );
   }
