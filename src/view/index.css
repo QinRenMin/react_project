@@ -1,3 +1,4 @@
+/*利用flex，结合.main，实现整体布局*/
 .pageWrap {
     display: flex;
     min-height: 100vh;
@@ -41,6 +42,7 @@
     top: 0;
     width: auto;
 }
+/*使用弹性盒模型，进行占位，使底部固定*/
 .main {
     flex: 1;
 }
@@ -48,6 +50,7 @@
     border: 1px solid #ccc;
     border-top: none;
     overflow: hidden;
+    /*margin-left: 280px;*/
 }
 .indexSider {
     border-right: 1px solid #ccc;
@@ -78,6 +81,7 @@
 }
 .indexList {
     padding: 0 10px 20px;
+    border-left: 1px solid #ccc;
 }
 .indexList p {
     margin: 0;
@@ -128,6 +132,7 @@
     right: 0;
     top: 12px;
 }
+/*小屏幕下的响应处理*/
 @media all and (max-width: 767px) {
     .userList h4 {
         display: block;

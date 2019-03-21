@@ -10,8 +10,13 @@ class App extends Component {
 
     return (
       <div className="pageWrap">
-          <RouterIndex/>
+
+
           <MainHeader/>
+
+          <main className="main">
+              <RouterIndex/>
+          </main>
           <Footer/>
       </div>
     );

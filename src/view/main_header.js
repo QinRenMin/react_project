@@ -27,7 +27,7 @@ class MainHeader extends Component{
                         }>
                             <Button typeof="bars">下拉菜单</Button>
                         </Dropdown>
-                        下拉菜单</Col>
+                        </Col>
                 </Row>
             </Layout.Header>
 

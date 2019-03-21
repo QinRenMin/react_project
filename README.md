@@ -81,36 +81,98 @@
    
          </div>
        );  
-   ```
+  ```
    
-### 编写页面的头部和底部
-    一：头部
-    1.使用antd的Layout布局
-    2.遇到了样式无法加载问题
-        使用：
+### 编写页面的头部和底部   
+ 头部:  
+ 1.使用antd的Layout布局     
+     2.遇到了样式无法加载问题
+    使用： 
    ```
         import 'antd/dist/antd.css
         import <Layout> from 'antd'
    ```
     有时候仅仅导入antd是没有效果的
-    3.使用Row Col 
+  3.使用Row Col 
     利用md和xs设计响应布局
    ```
    <Col md={8} xs={24}>     </Col>
    <Col md={16} xs={0}>     </Col>
    ```
-    4.使用Divider分割线
+   4.使用Divider分割线
    ``` 
    <Divider type="vertical"/>
    ``` 
    
-    5.使用Menu,制作菜单
-    6.使用Icon,图标相关方面
+   5.使用Menu,制作菜单
+   6.使用Icon,图标相关方面
    ```
    <Icon type="home"/>
    ```
    7.制作小屏幕下拉菜单
    ```Dropdown```　
    
-   8.封装导航部分，放在组件里，传递参数，控制导航的方向问题
+   8.封装导航部分，放在组件里(nav.js)，传递参数，控制导航的方向问题　　
    
+  尾部：　
+   
+  1.使用layout布局　
+  
+  2.利用弹性盒模型，将其放置在底部，并设置中间内容的显示问题
+ 
+ ###编写首页
+ 1.内容组成 
+ 
+   左侧导航以及右侧展示区 
+   
+ 2.中间内容整体布局
+   ```
+   <Row>
+          <Col md={8} xs={0}>左侧导航</Col>
+          <Col md={16} xs={24}>右侧内容</Col>
+   </Row>
+   ```
+  3.左侧导航实现
+  ```
+  <Menu>
+    <Menu.Item><Link to=""></Menu.Item>
+  </Menu>
+设计相关样式　
+ ```
+   
+   
+ 4.实现左侧导航在大小屏幕下响应式布局，并将其封装在indexMenu.js文件下．
+ 原理同nav.js. 
+ nav.js
+ ```
+    import React,{Component} from "react";
+    import {Menu} from "antd";
+    import {Link} from "react-router-dom";
+    class IndexMenu  extends Component{
+    
+        render(){
+            let {mode,id} = this.props;
+            return(
+                <Menu id={id}
+                      mode={mode}
+                >
+                    <Menu.Item>
+                        <Link to="/index/all">全部</Link>
+                    </Menu.Item>
+                </Menu>
+            )
+        }
+    }
+    export default IndexMenu;
+   ```
+  在user/index.js下,实现响应布局
+  ```
+  <Col md={8} xs={0} className="indexSider">
+     <IndexMenu id="indexMenu" mode="vertical"/>
+   </Col>
+  
+  <Col md={0} xs={24} className="indexSider">
+       <IndexMenu id="indexXsMenu" mode="horizontal"/>
+  </Col>
+
+ ```
