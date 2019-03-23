@@ -1,7 +1,8 @@
 import React,{Component} from "react";
 
 import {Row,Col} from "antd";
-import IndexMenu from "../user/indexMenu";
+import IndexMenu from "./indexMenu";
+import IndexList from "./list";
 
 class Index extends  Component{
     render(){
@@ -27,7 +28,7 @@ class Index extends  Component{
                 }
                 className="indexList"
                 >
-
+                    <IndexList/>
                 </Col>
             </Row>
 

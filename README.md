@@ -165,7 +165,7 @@
     }
     export default IndexMenu;
    ```
-  在user/index.js下,实现响应布局
+  在index/index.js下,实现响应布局
   ```
   <Col md={8} xs={0} className="indexSider">
      <IndexMenu id="indexMenu" mode="vertical"/>
@@ -176,3 +176,90 @@
   </Col>
 
  ```
+ 
+ ５．实现右侧列表 
+ 
+ 在右侧添加数据，显示详细信息　
+ 
+   5.1　添加data.js
+  ```
+    let data = {
+        "success":"true",
+        "data":[
+            {
+            "id":1,
+            "title":"html基本框架",
+            "last_reply_at":"2017-12-04T13:57:30.730Z",
+            "img_url":"/bg1.jpg",
+            "author":"jane"
+        },
+            {
+                "id":2,
+                "title":"html行内与块级元素",
+                "last_reply_at":"2017-12-05T13:57:30.730Z",
+                "img_url":"/bg2.jpg",
+                "author":"lili"
+            },
+    
+            {
+                "id":3,
+                "title":"htm全局属性",
+                "last_reply_at":"2017-12-17　13:57:30.73",
+                "img_url":"/fall.jpg",
+                "author":"Make"
+            },
+    
+            {
+                "id":4,
+                "title":"html表格",
+                "last_reply_at":"2017-12-019T13:57:30.730Z",
+                "img_url":"/main5.jpg",
+                "author":"Lucy"
+            },
+        ]
+    };
+    
+    export default data;
+ ```
+   5.2添加list.js,添加IndexList组件
+ 
+   使用antd中的List，利用其中的相关参数
+   
+   List.Item.Meta，利用其中的相关参数
+ ```
+ <List
+                 dataSource = {data.data}
+                 loading = {false}
+                 renderItem = {(item) =>(<List.Item>
+ 
+                             <List.Item.Meta
+                                  avatar={<Avatar src={require('../../images'+item.img_url)}/>}
+                                  title ={
+                                      <h3>
+                                          <Link to="/details">
+                                         {item.title}
+                                          </Link>
+                                      </h3>
+                                  }
+                                 description ={
+                                      <p>
+                                          <Link to="/user">
+                                              {item.author}
+                                          </Link>
+                                          发表时间:{item.last_reply_at.split("T")[0]}
+                                      </p>
+                                  }
+ 
+                             />
+ 
+                 </List.Item>)}
+ 
+             >
+             </List>
+
+```
+
+遇到的问题：引入本地图片
+个人博客对于这一点的阐述：
+[react引入本地图片的方法](https://www.jianshu.com/p/1cc13a2436dd)
+    
