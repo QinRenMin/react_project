@@ -223,7 +223,7 @@
  ```
    5.2添加list.js,添加IndexList组件
  
-   使用antd中的List，利用其中的相关参数
+   5.2.1使用antd中的List，利用其中的相关参数
    
    List.Item.Meta，利用其中的相关参数
  ```
@@ -261,5 +261,21 @@
 
 遇到的问题：引入本地图片
 个人博客对于这一点的阐述：
-[react引入本地图片的方法](https://www.jianshu.com/p/1cc13a2436dd)
-    
+[react引入本地图片的方法](https://www.jianshu.com/p/1cc13a2436dd) 
+
+5.2.2 给每个列表添加分类标签 
+```
+在view目录下添加txtTag.js文件 
+引入Tag标签 
+return <Tag color="red">置顶</Tag>
+
+在list.js中引入组件,添加至列表标题处 
+title ={
+ <div>
+  <TxtTag/>
+          <Link to="/details">
+                  {item.title}
+              </Link>
+     </div>
+  }
+```
