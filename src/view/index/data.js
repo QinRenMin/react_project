@@ -8,7 +8,9 @@ let data = {
         "img_url":"/bg1.jpg",
         "author":"jane",
         "reply_count":10,
-        "visit_count":1300
+        "visit_count":1300,
+        "Top":true,
+            "tag":"Html"
     },
         {
             "id":2,
@@ -17,7 +19,9 @@ let data = {
             "img_url":"/bg2.jpg",
             "author":"lili",
             "reply_count":20,
-            "visit_count":1000
+            "visit_count":1000,
+            "tag":"Html",
+            "Top":false
         },
 
         {
@@ -27,7 +31,9 @@ let data = {
             "img_url":"/fall.jpg",
             "author":"Make",
             "reply_count":50,
-            "visit_count":2000
+            "visit_count":2000,
+            "tag":"Html",
+            "Top":false
         },
 
         {
@@ -37,7 +43,21 @@ let data = {
             "img_url":"/main5.jpg",
             "author":"Lucy",
             "reply_count":80,
-            "visit_count":100
+            "visit_count":100,
+            "tag":"Html",
+            "Top":false
+        },
+
+        {
+            "id":5,
+            "title":"css浮动",
+            "last_reply_at":"2017-12-019T13:57:30.730Z",
+            "img_url":"/main5.jpg",
+            "author":"Lucy",
+            "reply_count":80,
+            "visit_count":100,
+            "tag":"Css",
+            "Top":false
         },
     ]
 };

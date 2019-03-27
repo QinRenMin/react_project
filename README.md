@@ -279,3 +279,47 @@ title ={
      </div>
   }
 ```
+5.2.3给标签设置分类
+```
+const tag = {
+  Top:{
+      color:"red",
+      txt:"置顶"
+  },
+
+  Html:{
+      color:"blue",
+      txt:"Html"
+  },
+    Css:{
+        color:"yellow",
+        txt:"Css"
+    },
+    Javascript:{
+        color:"green",
+        txt:"javascript"
+    },
+    React:{
+        color:"purple",
+        txt:"react"
+    },
+    Node:{
+        color:"gray",
+        txt:"node"
+    }
+
+};
+```
+判断每个列表的标签分类
+```
+function getTag(data) {
+    return(data.Top ? "Top":data.tag)
+}
+
+render(){
+        // console.log(this.props.data);
+        let nowTag = tag[getTag(this.props.data)];
+        // console.log(nowTag);
+        return <Tag color={nowTag.color}>{nowTag.txt}</Tag>
+    }
+```

@@ -28,7 +28,7 @@ class IndexList extends Component {
                                  title ={
 
                                         <div>
-                                            <TxtTag/>
+                                            <TxtTag data={item}/>
                                             <Link to="/details">
                                                 {item.title}
                                             </Link>
