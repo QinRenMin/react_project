@@ -16,7 +16,7 @@ class Nav extends Component{
 
                 <Menu.Item><Link to='/book'><Icon type="book" />文章</Link>
                 </Menu.Item>
-                <Menu.Item><Link　to='/about'><Icon type="question-circle" /> 关于</Link>
+                <Menu.Item><Link　to='/about'><Icon type="question-circle" /> 个人中心</Link>
                 </Menu.Item>
             </Menu>
         )

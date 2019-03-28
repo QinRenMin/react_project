@@ -10,7 +10,10 @@ let data = {
         "reply_count":10,
         "visit_count":1300,
         "Top":true,
-            "tag":"Html"
+        "tag":"Html",
+         "score":600,
+          "count":300,
+         "content":""
     },
         {
             "id":2,
@@ -21,7 +24,10 @@ let data = {
             "reply_count":20,
             "visit_count":1000,
             "tag":"Html",
-            "Top":false
+            "Top":false,
+            "score":780,
+            "count":160,
+            "content":""
         },
 
         {
@@ -34,6 +40,8 @@ let data = {
             "visit_count":2000,
             "tag":"Html",
             "Top":false,
+            "score":1600,
+            "count":800,
             "content":"accesskey: 规定激活元素的快捷键;\n" +
                 "用法:<element accesskey=\"character\">\n" +
                 "支持:<a>, <area>, <button>, <input>, <label>, <legend> 以及 <textarea>,目前不支持 Opera浏览器"
@@ -48,7 +56,10 @@ let data = {
             "reply_count":80,
             "visit_count":100,
             "tag":"Html",
-            "Top":false
+            "Top":false,
+            "score":200,
+            "count":100,
+            "content":""
         },
 
         {
@@ -60,7 +71,10 @@ let data = {
             "reply_count":80,
             "visit_count":100,
             "tag":"Css",
-            "Top":false
+            "Top":false,
+            "score":800,
+            "count":400,
+            "content":""
         },
     ]
 };

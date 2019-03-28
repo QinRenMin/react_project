@@ -6,6 +6,7 @@ import IndexList from "./list";
 
 class Index extends  Component{
     render(){
+        let tab = this.props.location.pathname;
         return (
             <Row className="wrap">
                 <Col md={8} xs={0} className="indexSider">
@@ -28,7 +29,9 @@ class Index extends  Component{
                 }
                 className="indexList"
                 >
-                    <IndexList/>
+                    <IndexList
+                        tab={tab}
+                    />
                 </Col>
             </Row>
 

@@ -3,11 +3,28 @@ import {List,Avatar} from "antd";
 import data from "./data";
 import {Link} from "react-router-dom";
 import TxtTag from "../txtTag"
+
+//调用redux
+import {connect} from "react-redux"
 // import  arr from "../../images/bg1.jpg";
 class IndexList extends Component {
 
+    // constructor(props){
+    //     super(props);
+    //     let {tab} = this.props;
+    //     this.state={
+    //         page:1,
+    //
+    //         tab,
+    //
+    //     }
+    // }
     render() {
-        console.log(data);
+        // console.log(data);
+        console.log(this.props);
+        //首页需要的数据
+        //loading data page tab
+        // const {loadding,data} = this.props;
         return (
 
             <List
@@ -54,4 +71,4 @@ class IndexList extends Component {
         )
     }
 }
-export default IndexList;
+export default connect(state=>state.list)(IndexList);
