@@ -4,6 +4,8 @@ import {Card, Button, Modal} from 'antd'
 import {Editor} from 'react-draft-wysiwyg'
 import draftjs from 'draftjs-to-html'
 import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css'
+import Type from "./articleType"
+
 export default class RichText extends React.Component{
     state = {
         showRichText: false,
@@ -35,8 +37,11 @@ export default class RichText extends React.Component{
         return (
             <div>
                 <Card>
+                    <Type/>
                     <Button type="primary" onClick={this.handleClearContent}>清空内容</Button>
                     <Button type="primary" onClick={this.handleGetText} style={{marginLeft: 10}}>获取html文本</Button>
+                    <Button type="primary"　style={{marginLeft: 10}}>发布</Button>
+
                 </Card>
                 <Card title="富文本编辑器">
                     <Editor
@@ -60,6 +65,7 @@ export default class RichText extends React.Component{
                 >
                     {draftjs(this.state.editorContent)}
                 </Modal>
+
             </div>
         )
     }

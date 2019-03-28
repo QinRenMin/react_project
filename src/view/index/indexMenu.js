@@ -22,7 +22,7 @@ class IndexMenu  extends Component{
                 </Menu.Item>
 
                 <Menu.Item>
-                    <Link to="/index/study_JS">JavaScripts</Link>
+                    <Link to="/index/study_JS">JavaScript</Link>
                 </Menu.Item>
 
                 <Menu.Item>

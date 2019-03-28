@@ -1,7 +1,7 @@
 import React,{Component} from "react";
 //使用antd 中的layout布局
 import 'antd/dist/antd.css'
-import {Layout,Row,Col,Divider,Icon,Dropdown,Button} from "antd";
+import {Layout,Row,Col,Divider,Dropdown,Button} from "antd";
 //使用Link,实现菜单导航跳转页面
 import Nav from "./nav";
 class MainHeader extends Component{

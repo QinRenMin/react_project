@@ -11,7 +11,7 @@ class Nav extends Component{
                 theme="dark"
             >
                 <Menu.Item>
-                    <Link to="/index"><Icon type="home"/>首页</Link>
+                    <Link to="/index/all"><Icon type="home"/>首页</Link>
                 </Menu.Item>
 
                 <Menu.Item><Link to='/book'><Icon type="book" />文章</Link>

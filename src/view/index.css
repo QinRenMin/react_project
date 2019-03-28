@@ -139,3 +139,9 @@
     }
 
 }
+
+#article_type button{
+    display: block;
+    width: 200px;
+    margin-bottom: 10px;
+}

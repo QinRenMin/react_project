@@ -33,7 +33,10 @@ let data = {
             "reply_count":50,
             "visit_count":2000,
             "tag":"Html",
-            "Top":false
+            "Top":false,
+            "content":"accesskey: 规定激活元素的快捷键;\n" +
+                "用法:<element accesskey=\"character\">\n" +
+                "支持:<a>, <area>, <button>, <input>, <label>, <legend> 以及 <textarea>,目前不支持 Opera浏览器"
         },
 
         {
