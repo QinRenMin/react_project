@@ -1,7 +1,14 @@
 import React,{Component} from "react";
+import RichText from "./rich"
 class Article extends  Component{
     render(){
-        return <p>文章</p>
+        return(
+    <div>
+        <RichText/>
+
+    </div>
+        )
+
     }
 }
 export default Article;
