@@ -4,3 +4,4 @@ function detail(state = {},action){
             return state;
     }
 }
+export  default detail;
