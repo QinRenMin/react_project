@@ -21,7 +21,7 @@ export default  class User extends  Component{
                 <UserList
                     loading={false}
                     title="最近创建的话题"
-                    data = {data.data[2].recent}
+                    // data = {data.data[2].recent}
                 />
             </div>
         )

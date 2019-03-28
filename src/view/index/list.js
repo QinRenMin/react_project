@@ -19,6 +19,9 @@ class IndexList extends Component {
     //
     //     }
     // }
+    // componentWillReceiveProps(nextProps){
+    //     console.log(nextProps);
+    // }
     render() {
         // console.log(data);
         console.log(this.props);
