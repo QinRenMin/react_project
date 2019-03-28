@@ -323,3 +323,15 @@ render(){
         return <Tag color={nowTag.color}>{nowTag.txt}</Tag>
     }
 ```
+
+### 编写文章页面
+ 1.使用富文本编辑器 
+ 
+   1.1在book目录下建立rich.js
+ ```
+    安装插件:
+    react-draft-wysiwyg： 文本编辑器插件
+         
+    draftjs-to-html：文本转换为html的插件
+
+```
